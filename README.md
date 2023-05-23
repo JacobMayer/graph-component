@@ -1,15 +1,15 @@
 # Example Usage
 
 ## Node Highlighting:
-// Highlight node 0 with color 'yellow' for 1 second
+Highlight node 0 with color 'yellow' for 1 second
 ```yield* graph.highlightNode(0, "yellow", 1);```
 
 ## Connection Highlighting:
-// Highlight connection 1 with color 'red' for 1 second
+Highlight connection 1 with color 'red' for 1 second
 ```yield* graph.highlightConnection(1, "red", 1);```
 
 # Graph Examples:
-//Simple Neural Network of 10 nodes with one input layer and one hidden layer:
+Simple Neural Network of 10 nodes with one input layer and one hidden layer:
 ```nodes: [
     // Input Layer
     [100, 50],  // Node 0
