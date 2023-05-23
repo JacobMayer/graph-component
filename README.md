@@ -1,5 +1,11 @@
 # Example Usage
 
+## Moving Nodes:
+Move node 1 and connections follow, to position 300, 0 over 3 seconds
+```yield* graph.moveNode(1, [300, 0], 3);```
+## Changing Node Size:
+Change the size of node 2 to 128 over 1 second
+```yield* graph.changeNodeSize(2, 128, 1);```
 ## Node Highlighting:
 Highlight node 0 with color 'yellow' over 1 second
 ```yield* graph.highlightNode(0, "yellow", 1);```
@@ -7,9 +13,6 @@ Highlight node 0 with color 'yellow' over 1 second
 ## Connection Highlighting:
 Highlight connection 1 with color 'red' over 1 second
 ```yield* graph.highlightConnection(1, "red", 1);```
-## Moving Nodes:
-Move node 1 and connections follow, to position 300, 0 over 3 seconds
-```yield* graph.moveNode(1, [300, 0], 3);```
 
 # Graph Examples:
 # Simple Neural Network
