@@ -10,7 +10,8 @@ Highlight connection 1 with color 'red' for 1 second
 
 # Graph Examples:
 Simple Neural Network of 10 nodes with one input layer and one hidden layer:
-```nodes: [
+```
+nodes: [
     // Input Layer
     [100, 50],  // Node 0
     [100, 150], // Node 1
