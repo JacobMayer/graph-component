@@ -6,11 +6,11 @@ export default makeScene2D(function* (view) {
 const graph = new Graph({
   nodes: [
     // Input Layer
-    [100, 50],  // Node 0
-    [100, 150], // Node 1
-    [100, 250], // Node 2
-    [100, 350], // Node 3
-    [100, 450], // Node 4
+    [100, 100],  // Node 0
+    [100, 200], // Node 1
+    [100, 300], // Node 2
+    [100, 400], // Node 3
+    [100, 500], // Node 4
 
     // Hidden Layer
     [300, 100],  // Node 5
@@ -51,25 +51,22 @@ const graph = new Graph({
         [4, 9], // Node 4 -> Node 9
 ]
         });
-        
-        view.add(graph);
-        // Highlight node 0 with color 'yellow' for 1 second
-        yield* graph.highlightNode(0, "yellow", 1);
-        // Highlight connection 1 with color 'red' for 1 second
-        yield* graph.highlightConnection(1, "red", 1);
-        
 view.add(graph);
 
+// Highlight node 0 with color 'yellow' for 1 second
+yield* graph.highlightNode(0, "yellow", 1);
+        // Highlight connection 1 with color 'red' for 1 second
+yield* graph.highlightConnection(1, "red", 1);
+        
+view.add(graph);
+// move node 1 and connections follow, to position 300, 0 over 3 seconds
+yield* graph.moveNode(1, [0, 200], 0.5);
 // Highlight connection 1 with color 'red' for 1 second
-yield* graph.highlightConnection(1 , "red", 1);
+yield* graph.highlightConnection(1 , "red", 0.5);
 // Highlight connection 18 with color 'red' for 1 second
-yield* graph.highlightConnection(18 , "red", 1);
+yield* graph.highlightConnection(18 , "red", 0.5);
 // Highlight node 0 with color 'yellow' for 1 second
 yield* graph.highlightNode(0, "purple", 1);
 // Change the size of node 2 to 128 for 1 second
 //yield* graph.changeNodeSize(2, 128, 1);
-// move node 1 and connections follow, to position 300, 0 over 3 seconds
-yield* graph.moveNode(1, [300, 0], 3);
-// Highlight node 3 with color 'orange' for 2 seconds
-yield* graph.highlightNode(3, "orange", 2);
 });
