@@ -1,14 +1,14 @@
-#Example Usage
+# Example Usage
 
-##Node Highlighting:
+## Node Highlighting:
 // Highlight node 0 with color 'yellow' for 1 second
 yield* graph.highlightNode(0, "yellow", 1);
 
-##Connection Highlighting:
+## Connection Highlighting:
 // Highlight connection 1 with color 'red' for 1 second
 //yield* graph.highlightConnection(1, "red", 1);
 
-#Graph Examples:
+# Graph Examples:
 //Simple Neural Network of 10 nodes with one input layer and one hidden layer:
 nodes: [
     // Input Layer
