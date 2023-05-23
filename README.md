@@ -20,11 +20,11 @@ of 10 nodes with one input layer and one hidden layer:
 ```
 nodes: [
     // Input Layer
-    [100, 50],  // Node 0
-    [100, 150], // Node 1
-    [100, 250], // Node 2
-    [100, 350], // Node 3
-    [100, 450], // Node 4
+    [100, 100],  // Node 0
+    [100, 200], // Node 1
+    [100, 300], // Node 2
+    [100, 400], // Node 3
+    [100, 500], // Node 4
 
     // Hidden Layer
     [300, 100],  // Node 5
@@ -33,7 +33,7 @@ nodes: [
     [300, 400], // Node 8
     [300, 500], // Node 9
 ],
-connections: [
+      connections: [
         [0, 5], // Node 0 -> Node 5
         [0, 6], // Node 0 -> Node 6
         [0, 7], // Node 0 -> Node 7
