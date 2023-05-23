@@ -48,41 +48,41 @@ import {
         }
       });
     }
-    private createBinaryTree() {
-        // First, add nodes
-        this.nodes().forEach((pos, index) => {
-          const nodeRef = makeRef(this.nodeRefs, index);
-          this.add(
-            <Circle
-              ref={nodeRef}
-              size={this.nodeSize}
-              stroke={8}
-              fill={"white"}
-              lineWidth={2}
-              position={pos}
-              zIndex={100}
-            />
-          );
-        });
+    // private createBinaryTree() {
+    //     // First, add nodes
+    //     this.nodes().forEach((pos, index) => {
+    //       const nodeRef = makeRef(this.nodeRefs, index);
+    //       this.add(
+    //         <Circle
+    //           ref={nodeRef}
+    //           size={this.nodeSize}
+    //           stroke={8}
+    //           fill={"white"}
+    //           lineWidth={2}
+    //           position={pos}
+    //           zIndex={100}
+    //         />
+    //       );
+    //     });
     
-        // Then, add connections
-        this.connections().forEach((lineValues) => {
-          if (lineValues.length > 1) {
-            this.add(
-              <Line
-                ref={makeRef(this.connectionRefs, this.connectionRefs.length)}
-                points={lineValues.map((pos) => this.nodeRefs[pos].position())}
-                lineWidth={10}
-                stroke={"white"}
-              />
-            );
-          }
-        });
-      }
+    //     // Then, add connections
+    //     this.connections().forEach((lineValues) => {
+    //       if (lineValues.length > 1) {
+    //         this.add(
+    //           <Line
+    //             ref={makeRef(this.connectionRefs, this.connectionRefs.length)}
+    //             points={lineValues.map((pos) => this.nodeRefs[pos].position())}
+    //             lineWidth={10}
+    //             stroke={"white"}
+    //           />
+    //         );
+    //       }
+    //     });
+    //   }
 
       public constructor(props?: GraphProps) {
         super(props);
-        this.createBinaryTree();
+        // this.createBinaryTree();
       }
       
     public *highlightNode(nodeIndex: number, color: string, duration: number) {
