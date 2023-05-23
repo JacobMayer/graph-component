@@ -56,4 +56,4 @@ connections: [
         [4, 7], // Node 4 -> Node 7
         [4, 8], // Node 4 -> Node 8
         [4, 9], // Node 4 -> Node 9
-]```
+]
