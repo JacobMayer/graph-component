@@ -1,15 +1,19 @@
 # Example Usage
 
 ## Node Highlighting:
-Highlight node 0 with color 'yellow' for 1 second
+Highlight node 0 with color 'yellow' over 1 second
 ```yield* graph.highlightNode(0, "yellow", 1);```
 
 ## Connection Highlighting:
-Highlight connection 1 with color 'red' for 1 second
+Highlight connection 1 with color 'red' over 1 second
 ```yield* graph.highlightConnection(1, "red", 1);```
+## Moving Nodes:
+Move node 1 and connections follow, to position 300, 0 over 3 seconds
+```yield* graph.moveNode(1, [300, 0], 3);```
 
 # Graph Examples:
-Simple Neural Network of 10 nodes with one input layer and one hidden layer:
+# Simple Neural Network
+of 10 nodes with one input layer and one hidden layer:
 ```
 nodes: [
     // Input Layer
@@ -57,3 +61,24 @@ connections: [
         [4, 8], // Node 4 -> Node 8
         [4, 9], // Node 4 -> Node 9
 ]
+```
+# Binary Tree:
+```
+nodes: [
+        [200, 50], // Root node
+        [100, 150], // Left child of root
+        [300, 150], // Right child of root
+        [50, 250], // Left child of left child
+        [150, 250], // Right child of left child
+        [250, 250], // Left child of right child
+        [350, 250], // Right child of right child
+      ],
+      connections: [
+        [0, 1], // Root -> Left child
+        [0, 2], // Root -> Right child
+        [1, 3], // Left child -> Left child's left child
+        [1, 4], // Left child -> Left child's right child
+        [2, 5], // Right child -> Right child's left child
+        [2, 6], // Right child -> Right child's right child
+      ]
+```
