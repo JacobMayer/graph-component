@@ -209,4 +209,22 @@ import {
     private isGraphNode(node: GraphNode): node is GraphNode {
       return node instanceof GraphNode;
     }
+
+    public* change(connectionIndex: number){
+      yield* tween(1, value => {
+          this.connectionRefs[connectionIndex].stroke(
+              new Gradient({
+                  type: 'linear',
+                  from: this.connectionRefs[connectionIndex].points()[0],
+                  to: this.connectionRefs[connectionIndex].points()[1],
+                  stops: [
+                      {offset: value-.2 < 0 ? 0 : value-.2, color: '#242424'},
+                      {offset: value, color: Colors.blue},
+                      {offset: value+.2 > 1 ? 1 : value+.2, color: '#242424'},
+                  ],
+              })
+          );
+      })
+  }
+
   }
