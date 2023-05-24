@@ -33,5 +33,6 @@ export default makeScene2D(function* (view) {
         );
       
         yield* graph().fadeIn();
+        yield* graph().change(0);        
         yield* waitFor(1); 
       });
